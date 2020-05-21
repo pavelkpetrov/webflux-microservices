@@ -1,0 +1,9 @@
+server:
+  port: 2226
+
+spring:
+  application:
+    name: order-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/order

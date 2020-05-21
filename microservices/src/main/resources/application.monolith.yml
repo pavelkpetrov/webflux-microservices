@@ -1,0 +1,13 @@
+service:
+  name:
+    account: account-service
+    aggregate: aggregate-service
+    catalog: catalog-service
+    customer: customer-service
+    order: order-service
+  url:
+    account: http://localhost:2222
+    aggregate: http://localhost:2223
+    catalog: http://localhost:2224
+    customer: http://localhost:2225
+    order: http://localhost:2226

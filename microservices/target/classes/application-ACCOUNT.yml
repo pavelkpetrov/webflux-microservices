@@ -1,0 +1,21 @@
+server:
+  port: 2222
+
+spring:
+  application:
+    name: account-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/account
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: inputSubscriber
+      default:
+        contentType: application/json

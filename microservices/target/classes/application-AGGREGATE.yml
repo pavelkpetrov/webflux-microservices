@@ -1,0 +1,21 @@
+server:
+  port: 2223
+
+spring:
+  application:
+    name: aggregate-service
+
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+  hystrix:
+    enabled: false
+
+logging:
+  level:
+    com.softeco.examples.services.aggregate.clients : TRACE
+    com.netflix.hystrix: TRACE
+    reactivefeign.client: TRACE

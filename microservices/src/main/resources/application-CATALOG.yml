@@ -1,0 +1,9 @@
+server:
+  port: 2224
+
+spring:
+  application:
+    name: catalog-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/catalog
