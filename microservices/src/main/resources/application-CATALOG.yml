@@ -7,3 +7,19 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/catalog
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              autoBindDlq: true
+      bindings:
+        input:
+          destination: inputSubscriber
+          group: inputSubscriberGroup

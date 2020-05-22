@@ -1,4 +1,4 @@
-package com.softeco.examples.services.account.model.event;
+package com.softeco.examples.services.common.event;
 
 import com.softeco.examples.services.account.model.Account;
 import com.softeco.examples.services.common.components.event.BaseEvent;

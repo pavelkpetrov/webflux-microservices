@@ -5,8 +5,8 @@ import com.softeco.examples.services.order.model.Order;
 import com.softeco.examples.services.order.model.OrderCreateCommand;
 import com.softeco.examples.services.order.model.OrderFormCommand;
 import com.softeco.examples.services.order.model.OrderState;
-import com.softeco.examples.services.order.model.event.OrderCreateEvent;
-import com.softeco.examples.services.order.model.event.OrderFormEvent;
+import com.softeco.examples.services.common.event.OrderCreateEvent;
+import com.softeco.examples.services.common.event.OrderFormEvent;
 import com.softeco.examples.services.order.repository.OrderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,8 +63,8 @@ public class OrderServiceImpl implements OrderService{
     }
 
     private void fireOrderCreated(String cqrsId, Order order){
-        OrderCreateEvent event = new OrderCreateEvent(cqrsId, order);
-        eventProvider.sendEvent(event);
+//        OrderCreateEvent event = new OrderCreateEvent(cqrsId, order);
+//        eventProvider.sendEvent(event);
     }
 
     private void fireOrderFormed(String cqrsId, Order order){

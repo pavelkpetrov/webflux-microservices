@@ -18,7 +18,7 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/customer/c")
 @Profile({"CUSTOMER", "MONOLITH"})
 public class CustomerCommandController {
 

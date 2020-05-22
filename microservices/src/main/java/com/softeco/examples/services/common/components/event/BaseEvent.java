@@ -19,7 +19,7 @@ public class BaseEvent<P> extends RemoteApplicationEvent {
     private String commandId;
     private EventDomainType domainType;
     protected String eventType;
-    protected String payload;
+    protected P payload;
 
     public BaseEvent(){
         super();
@@ -35,12 +35,7 @@ public class BaseEvent<P> extends RemoteApplicationEvent {
         this();
         setCommandId(commandId);
         setDomainType(domainType);
-        try {
-            setPayload(payloadAsJsonStr(payload));
-        } catch (JsonProcessingException ex){
-            log.error(ex.getMessage(), ex);
-            throw new MapException(ex.getMessage());
-        }
+        setPayload(payload);
     }
 
     protected String payloadAsJsonStr(P payload) throws JsonProcessingException {
@@ -51,6 +46,5 @@ public class BaseEvent<P> extends RemoteApplicationEvent {
     protected ObjectMapper getObjectMapper(){
         return new ObjectMapper();
     }
-
 
 }

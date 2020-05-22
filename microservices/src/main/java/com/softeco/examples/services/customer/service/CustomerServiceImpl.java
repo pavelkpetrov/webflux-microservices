@@ -5,7 +5,7 @@ import com.softeco.examples.services.common.components.clients.AccountClient;
 import com.softeco.examples.services.common.components.event.EventProvider;
 import com.softeco.examples.services.customer.model.Customer;
 import com.softeco.examples.services.customer.model.CustomerCreateCommand;
-import com.softeco.examples.services.customer.model.event.CustomerCreateEvent;
+import com.softeco.examples.services.common.event.CustomerCreateEvent;
 import com.softeco.examples.services.customer.repository.CustomerRepository;
 import com.softeco.examples.services.customer.utils.CustomerMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -48,8 +48,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     private void fireCustomerCreated(String cqrsId, Customer customer){
-        CustomerCreateEvent event = new CustomerCreateEvent(cqrsId, customer);
-        eventProvider.sendEvent(event);
+//        CustomerCreateEvent event = new CustomerCreateEvent(cqrsId, customer);
+//        eventProvider.sendEvent(event);
     }
 
     public Mono<Customer> findById(String id) {

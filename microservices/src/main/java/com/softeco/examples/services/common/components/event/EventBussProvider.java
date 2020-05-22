@@ -21,7 +21,7 @@ public class EventBussProvider implements EventProvider {
 
     @Override
     public void sendEvent(BaseEvent event) {
-        log.info("Event send: {}", event);
+        log.info("Event to send: {}", event);
         try {
             source.output().send(MessageBuilder.withPayload(event).build());
         } catch (Exception e){

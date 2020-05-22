@@ -6,7 +6,7 @@ import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Enumeration;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,7 +19,7 @@ public class Order {
 	private String number;
 	private String customerId;
 	private String accountId;
-	private Enumeration<OrderItem> orderItems;
+	private List<OrderItem> orderItems;
 	private OrderState state = OrderState.CREATED;
 
 	public Order() {

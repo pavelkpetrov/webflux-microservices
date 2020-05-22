@@ -9,7 +9,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
-import java.util.Enumeration;
+import java.util.List;
 
 @Getter
 @Setter
@@ -20,7 +20,7 @@ public class OrderAggregate {
     private String number;
     private Customer customerId;
     private Account accountId;
-    private Enumeration<OrderItem> orderItems;
+    private List<OrderItem> orderItems;
 
     public OrderAggregate(Order order) {
         this.id = order.getId();

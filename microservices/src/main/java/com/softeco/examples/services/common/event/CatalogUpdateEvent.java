@@ -1,4 +1,4 @@
-package com.softeco.examples.services.catalog.model.event;
+package com.softeco.examples.services.common.event;
 
 import com.softeco.examples.services.catalog.model.Catalog;
 import com.softeco.examples.services.common.components.event.BaseEvent;

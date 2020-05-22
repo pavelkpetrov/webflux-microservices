@@ -1,4 +1,4 @@
-package com.softeco.examples.services.customer.model.event;
+package com.softeco.examples.services.common.event;
 
 import com.softeco.examples.services.common.components.event.BaseEvent;
 import com.softeco.examples.services.common.components.event.EventDomainType;

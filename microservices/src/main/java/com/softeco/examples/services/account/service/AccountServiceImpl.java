@@ -2,7 +2,7 @@ package com.softeco.examples.services.account.service;
 
 import com.softeco.examples.services.account.model.Account;
 import com.softeco.examples.services.account.model.AccountCreateCommand;
-import com.softeco.examples.services.account.model.event.AccountCreateEvent;
+import com.softeco.examples.services.common.event.AccountCreateEvent;
 import com.softeco.examples.services.account.repository.AccountRepository;
 import com.softeco.examples.services.common.components.event.EventProvider;
 import lombok.extern.slf4j.Slf4j;
@@ -36,8 +36,8 @@ public class AccountServiceImpl implements AccountService {
     }
 
     private void fireAccountCreated(String cqrsId, Account account){
-        AccountCreateEvent event = new AccountCreateEvent(cqrsId, account);
-        eventProvider.sendEvent(event);
+//        AccountCreateEvent event = new AccountCreateEvent(cqrsId, account);
+//        eventProvider.sendEvent(event);
     }
 
     public Flux<Account> findByCustomer(String customerId) {
